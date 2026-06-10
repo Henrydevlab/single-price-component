@@ -1,0 +1,214 @@
+:root {
+  /* Colors */
+  --clr-primary-teal: hsl(179, 62%, 43%);
+  --clr-primary-teal-light: hsl(179, 62%, 48%); /* Lighter variation for layout grid */
+  --clr-primary-green: hsl(71, 73%, 54%);
+  --clr-primary-green-hover: hsl(71, 73%, 60%);
+  
+  --clr-neutral-light-gray: hsl(204, 43%, 93%);
+  --clr-neutral-gray-blue: hsl(218, 22%, 67%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-sans: 'Karla', sans-serif;
+  --fs-body: 1rem; /* 16px */
+  
+  /* Shadows & Radius */
+  --radius-main: 8px;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  background-color: var(--clr-neutral-light-gray);
+  color: var(--clr-neutral-gray-blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* Accessibility: Screen Reader Only helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Reset list defaults for role="list" layouts */
+ul[role="list"] {
+  list-style: none;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 635px;
+  margin-block: auto;
+}
+
+.price-card {
+  background-color: var(--clr-neutral-white);
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Shared Padding System via Logical Properties */
+.price-card__intro,
+.price-card__subscription,
+.price-card__features {
+  padding: 1.5rem;
+}
+
+/* --- Intro Section Styles --- */
+.price-card__intro {
+  background-color: var(--clr-neutral-white);
+}
+
+.price-card__title {
+  color: var(--clr-primary-teal);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-block-end: 1rem;
+}
+
+.price-card__guarantee {
+  color: var(--clr-primary-green);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-block-end: 0.75rem;
+}
+
+.price-card__description {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* --- Subscription Section Styles --- */
+.price-card__subscription {
+  background-color: var(--clr-primary-teal);
+  color: var(--clr-neutral-white);
+}
+
+.price-card__subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-block-end: 1rem;
+}
+
+.price-card__price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-end: 0.5rem;
+}
+
+.price-card__amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.price-card__frequency {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
+
+.price-card__access {
+  font-size: 0.95rem;
+  margin-block-end: 1.75rem;
+}
+
+/* Action Call-to-action Element */
+.price-card__cta {
+  display: block;
+  text-align: center;
+  background-color: var(--clr-primary-green);
+  color: var(--clr-neutral-white);
+  text-decoration: none;
+  font-weight: 700;
+  padding-block: 0.85rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.price-card__cta:hover {
+  background-color: var(--clr-primary-green-hover);
+}
+
+.price-card__cta:focus-visible {
+  outline: 3px solid var(--clr-neutral-white);
+  outline-offset: 2px;
+}
+
+.price-card__cta:active {
+  transform: scale(0.98);
+}
+
+/* --- Features Section Styles --- */
+.price-card__features {
+  background-color: var(--clr-primary-teal-light);
+  color: var(--clr-neutral-white);
+}
+
+.price-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.price-card__list-item {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive desktop */
+@media (min-width: 600px) {
+  .price-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .price-card__intro {
+    grid-column: span 2;
+    padding: 2.5rem;
+  }
+
+  .price-card__subscription,
+  .price-card__features {
+    padding: 2.5rem;
+  }
+}
+
+/* Attribution Footer */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-block-start: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
