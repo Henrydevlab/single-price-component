@@ -2,47 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join our community of developers and hone your skills with expert tutorials and code reviews. Single Price Grid Component.">
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  
   <title>Frontend Mentor | Single Price Grid Component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  Join our community
 
-  30-day, hassle-free money back guarantee
+  <main class="card-container">
+    <h1 class="sr-only">Subscription Pricing Information</h1>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+    <article class="price-card">
+      
+      <section class="price-card__intro">
+        <h2 class="price-card__title">Join our community</h2>
+        <p class="price-card__guarantee">30-day, hassle-free money back guarantee</p>
+        <p class="price-card__description">
+          Gain access to our full library of tutorials along with expert code reviews. 
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </section>
 
-  Monthly Subscription
+      <section class="price-card__subscription">
+        <h2 class="price-card__subtitle">Monthly Subscription</h2>
+        <div class="price-card__price-container">
+          <span class="price-card__amount">&dollar;29</span>
+          <span class="price-card__frequency">per month</span>
+        </div>
+        <p class="price-card__access">Full access for less than &dollar;1 a day</p>
+        <a href="#" class="price-card__cta" aria-label="Sign up for the monthly subscription package">Sign Up</a>
+      </section>
 
-  &dollar;29 per month
+      <section class="price-card__features">
+        <h2 class="price-card__subtitle">Why Us</h2>
+        <ul class="price-card__list" role="list">
+          <li class="price-card__list-item">Tutorials by industry experts</li>
+          <li class="price-card__list-item">Peer &amp; expert code review</li>
+          <li class="price-card__list-item">Coding exercises</li>
+          <li class="price-card__list-item">Access to our GitHub repos</li>
+          <li class="price-card__list-item">Community forum</li>
+          <li class="price-card__list-item">Flashcard decks</li>
+          <li class="price-card__list-item">New videos every week</li>
+        </ul>
+      </section>
 
-  Full access for less than &dollar;1 a day
+    </article>
+  </main>
 
-  Sign Up
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Henrydevlab">Henry</a>.
+  </footer>
 
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-      <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
 </body>
 </html>
